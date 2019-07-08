@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'dart:async';
 import 'main.dart';
-import 'register.dart';
+import 'registerguest.dart';
 
 var number;
 var passs;
@@ -156,7 +156,7 @@ class _loginpage extends State<logi> with TickerProviderStateMixin {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => new RegisterPage()));
+                                builder: (context) => new RegisterGuest()));
 //                            setState(() {
 //                              if (_state == 0) {
 //                                animateButton();

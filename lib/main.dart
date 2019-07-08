@@ -4,10 +4,13 @@ import 'location.dart';
 import 'home.dart';
 import 'profile.dart';
 import 'settings.dart';
-import 'loginpage.dart';
 import 'register.dart';
-import 'otp.dart';
-
+import 'lifestyle_perks.dart';
+import 'keycard_status.dart';
+import 'building_guide.dart';
+import 'refer_a_friend.dart';
+import 'events_drawer.dart';
+import 'registerguest.dart';
 class bottom extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -95,7 +98,12 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                         'Add guest',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new RegisterGuest()));
+                      },
                     ),
                     ListTile(
                       title: Text(
@@ -109,7 +117,12 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                         'Event',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new MyHomeevents()));
+                      },
                     ),
                     ListTile(
                       title: Text(
@@ -123,7 +136,12 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                         'Building Guide',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new MyHomebuilding()));
+                      },
                     ),
                     ListTile(
                       title: Text(
@@ -137,14 +155,24 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                         'LifeStyle Perks',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new MyHomePage()));
+                      },
                     ),
                     ListTile(
                       title: Text(
-                        'Register Keycard',
+                        'Keycard status',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new MyHomekey()));
+                      },
                     ),
                     new Divider(
                       color: Colors.white,
@@ -155,7 +183,12 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                         'Refer a Friend',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new TabBarDemo()));
+                      },
                     ),
                     ListTile(
                       title: Text(
@@ -232,7 +265,7 @@ class apt {
 //          )),
       actions: <Widget>[
         Container(
-            padding: const EdgeInsets.all(8.0), child: Icon(Icons.settings))
+            padding: const EdgeInsets.all(8.0), child: Icon(Icons.search))
         // here add other icon
       ],
 

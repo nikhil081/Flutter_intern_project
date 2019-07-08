@@ -23,19 +23,16 @@ class _home extends State<Home> {
           child: Scaffold(
               appBar: TabBar(
                 labelColor: Colors.black,
-
-                isScrollable: true,
                 indicator: BoxDecoration(color: Colors.grey[300]),
                 tabs: ([
                   new Container(
-                    width: width/2,
+                    width: width / 2,
                     child: new Tab(text: 'Feeds'),
                   ),
                   new Container(
-                    width: width/2,
+                    width: width / 2,
                     child: new Tab(text: 'Events'),
                   ),
-
                 ]),
               ),
               body: TabBarView(children: [
