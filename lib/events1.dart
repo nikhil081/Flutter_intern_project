@@ -3,20 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
-void main() => runApp(new MyApp());
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new MyHomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
+
 class _MyHomePageState extends State<MyHomePage> {
   String url = 'https://demo1744225.mockable.io/medium2';
   var data;
@@ -37,9 +29,11 @@ class _MyHomePageState extends State<MyHomePage> {
   static const row = 3;
   var column = 3;
   int ct;
+
   List<List> test = new List<List>(row);
   List<List> image_count = new List<List>(row);
   List<List> test1 = new List<List>(row);
+
   Future<String> makeRequest() async {
     var response = await http
         .get(Uri.encodeFull(url), headers: {"Accept": "application/json"});
@@ -75,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           k2 = k2 + 1;
         }
       }
+      //----------------------image code
       for (var i in data) {
         data1 = extractdata[i];
         for (var j in data1) {
@@ -116,64 +111,67 @@ class _MyHomePageState extends State<MyHomePage> {
       print(test1);
     });
   }
+
   @override
   void initState() {
-    makeRequest();
+    super.initState();
+    this.makeRequest();
   }
-  @override
-  void dispose() {
-    super.dispose();
-  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     var wid = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(
-          'Payment',
-          style: TextStyle(color: Colors.black),
+    var hei = MediaQuery.of(context).size.height;
+    return SingleChildScrollView(
+      child: new Container(
+        width: wid * 0.3,
+        height: hei * 0.1,
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemBuilder: (context, index) {
+            print("inside listview index" + index.toString());
+            return Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: <Widget>[
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemBuilder: (context, i) {
+                      return Padding(
+                        padding: EdgeInsets.only(top: 8.0),
+                        child: Column(
+                          children: <Widget>[
+                            ListView.builder(
+                                itemCount: image_count[index][i],
+                                shrinkWrap: true,
+                                itemBuilder: (context, j) {
+//                                print("value of index"+index.toString());
+//                                print("value of i"+i.toString());
+//                                print("value of j"+j.toString());
+                                  return Container(
+                                    child: CircleAvatar(
+                                      radius: 5,
+                                      backgroundImage:
+                                          NetworkImage(test1[index][i][j]),
+                                      backgroundColor: Colors.transparent,
+                                    ),
+                                    //Text(test1[index][i][j]),
+                                  );
+                                })
+                          ],
+                        ),
+                      );
+                    },
+                    //itemCount: e,
+                    itemCount: city_count[index], // this is a hardcoded value
+                  ),
+                ],
+              ),
+            );
+          },
+          itemCount: date_count, // this is a hardcoded value
         ),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  list[index],
-                  style: Theme.of(context).textTheme.body2,
-                ),
-                ListView.builder(
-                  shrinkWrap: true,
-                  itemBuilder: (context, i) {
-                    return Padding(
-                      padding: EdgeInsets.only(top: 8.0),
-                      child: Column(
-                        children: <Widget>[
-                          Text(test[index][i]),
-                          ListView.builder(
-                              itemCount:image_count[index][i] ,
-                              shrinkWrap: true, itemBuilder: (context, j) {
-                            return Container(
-                              child: Text(test1[index][i][j]),
-                            );
-                          })
-                        ],
-                      ),
-                    );
-                  },
-                  itemCount: city_count[index], // this is a hardcoded value
-                ),
-              ],
-            ),
-          );
-        },
-        itemCount: date_count, // this is a hardcoded value
       ),
     );
   }

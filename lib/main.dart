@@ -4,13 +4,9 @@ import 'location.dart';
 import 'home.dart';
 import 'profile.dart';
 import 'settings.dart';
-
-void main() {
-  runApp(MaterialApp(
-    title: "Exploring UI widgets",
-    home: new bottom(),
-  ));
-}
+import 'loginpage.dart';
+import 'register.dart';
+import 'otp.dart';
 
 class bottom extends StatefulWidget {
   @override
@@ -96,14 +92,81 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
                   children: <Widget>[
                     ListTile(
                       title: Text(
-                        'Search',
+                        'Add guest',
                         style: TextStyle(color: Colors.white),
                       ),
                       onTap: () {},
                     ),
                     ListTile(
                       title: Text(
-                        'Item 2',
+                        'Support',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Event',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Upcoming Reservations',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Building Guide',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Company Profile',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'LifeStyle Perks',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Register Keycard',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    new Divider(
+                      color: Colors.white,
+                      height: 50,
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Refer a Friend',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'About',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Log Out',
                         style: TextStyle(color: Colors.white),
                       ),
                       onTap: () {},
@@ -116,7 +179,13 @@ class _hg extends State<bottom> with SingleTickerProviderStateMixin {
       // Set the TabBar view as the body of the Scaffold
       body: new TabBarView(
         // Add tabs as widgets
-        children: <Widget>[new Home(), SecondTab(), new ThirdTab(),new FourthTab(),new Fifthtab()],
+        children: <Widget>[
+          new Home(),
+          SecondTab(),
+          new ThirdTab(),
+          new FourthTab(),
+          new Fifthtab()
+        ],
         // set the controller
         controller: controller,
       ),

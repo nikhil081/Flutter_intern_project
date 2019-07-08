@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Feeds.dart';
 import 'Events.dart';
-import 'events1.dart';
+
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -11,86 +11,41 @@ class Home extends StatefulWidget {
 }
 
 class _home extends State<Home> {
-  bool visibilityTag = false;
-
-  void _changed(bool t) {
-    setState(() {
-      visibilityTag = t;
-    });
-  }
-
-
-
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var width = size.width;
     var height = size.height;
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Row(
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: DefaultTabController(
+          length: 2,
+          child: Scaffold(
+              appBar: TabBar(
+                labelColor: Colors.black,
 
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-              children: <Widget>[
-
-                new Container(
-                  height: height*0.08,
-                  width: width / 2,
-                  child: RaisedButton(
-                    color: visibilityTag?Color(0xffD1D1D1):Color(0xffFFFFFF),
-                    onPressed: () {
-                      _changed(true);
-
-                    },
-                    child: Text("Feeds"),
+                isScrollable: true,
+                indicator: BoxDecoration(color: Colors.grey[300]),
+                tabs: ([
+                  new Container(
+                    width: width/2,
+                    child: new Tab(text: 'Feeds'),
                   ),
-                ),
-                new Container(
-                  height: height*0.08,
-
-                  width: width / 2,
-
-                  child: RaisedButton(
-                    color: visibilityTag?Color(0xffFFFFFF):Color(0xffD1D1D1),
-
-
-                    onPressed: () {
-
-                      _changed(false);
-                    },
-                    child: Text("Events"),
+                  new Container(
+                    width: width/2,
+                    child: new Tab(text: 'Events'),
                   ),
+
+                ]),
+              ),
+              body: TabBarView(children: [
+                Container(
+                  child: new Counter(),
                 ),
-              ],
-            ),
-            new Container(
-              color: Colors.black,
-              height: height*0.002,
-            ),
-            visibilityTag
-                ? new Container(
-              child: new Counter(),
-            )
-                : new Container(
-              child: new Counter2(),
-            )
-//            new Container(
-//
-//              child: new Counter(),
-//            ),
-//            new Container(
-//              child: new Counter2(),
-//            ),
-          ],
-        ),
-      ),
-    );
+                Container(
+                  child: new MyHomePage(),
+                )
+              ])),
+        ));
   }
 }
-
-
-
