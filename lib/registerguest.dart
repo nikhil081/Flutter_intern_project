@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
 import 'upcoming_guest.dart';
-
+import 'main.dart';
 var formatted;
 
 var names;
@@ -86,10 +86,6 @@ class RegisterGuestState extends State<RegisterGuest> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("Register Guest"),
-      ),
       body: SingleChildScrollView(
         child: new Column(
           children: <Widget>[

@@ -6,6 +6,8 @@ INJECTED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src
 INJECTED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from [:video_player] C:\Users\nikhil\AndroidStudioProjects\live_project\build\video_player\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] C:\Users\nikhil\AndroidStudioProjects\live_project\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.6.aar\6075cc09b690088c6761830e73e4f934\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.6.aar\2b790f544ef9958f9ccea1e4d8ab6d11\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.6.aar\ee8cdea2e5ec7edf4d996c3698ecaef5\AndroidManifest.xml:17:1-24:12
@@ -71,6 +73,10 @@ INJECTED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src
 INJECTED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src\main\AndroidManifest.xml
 MERGED from [:video_player] C:\Users\nikhil\AndroidStudioProjects\live_project\build\video_player\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [:video_player] C:\Users\nikhil\AndroidStudioProjects\live_project\build\video_player\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\nikhil\AndroidStudioProjects\live_project\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\nikhil\AndroidStudioProjects\live_project\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.6.aar\6075cc09b690088c6761830e73e4f934\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.6.aar\6075cc09b690088c6761830e73e4f934\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.6.aar\2b790f544ef9958f9ccea1e4d8ab6d11\AndroidManifest.xml:20:5-22:41
@@ -92,6 +98,12 @@ ADDED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src\de
 	android:name
 		ADDED from C:\Users\nikhil\AndroidStudioProjects\live_project\android\app\src\debug\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.6.aar\755ae6ee90ed1780da9169a89c6209be\AndroidManifest.xml:24:5-79
+ADDED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.6.aar\755ae6ee90ed1780da9169a89c6209be\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.6.aar\755ae6ee90ed1780da9169a89c6209be\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from [com.google.android.exoplayer:exoplayer-core:2.9.6] C:\Users\nikhil\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.6.aar\755ae6ee90ed1780da9169a89c6209be\AndroidManifest.xml:24:22-76
+		ADDED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from [:connectivity] C:\Users\nikhil\AndroidStudioProjects\live_project\build\connectivity\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:22-73

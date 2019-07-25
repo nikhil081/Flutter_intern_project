@@ -3,11 +3,38 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'loginpage.dart';
 import 'dart:async';
+import 'home.dart';
+import 'main.dart';
+import 'profile.dart';
+import 'settings.dart';
+import 'register.dart';
+import 'lifestyle_perks.dart';
+import 'keycard_status.dart';
+import 'building_guide.dart';
+import 'refer_a_friend.dart';
+import 'events_drawer.dart';
+import 'registerguest.dart';
+import 'loginpage.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
     home: VideoSplashScreen(),
+    routes: <String, WidgetBuilder>{
+      '/loginscreen': (BuildContext context) => new logi(),
+      '/mainscreen': (BuildContext context) => new bottom(),
+      '/addguestscreen': (BuildContext context) => new RegisterGuest(),
+      '/feedsevents': (BuildContext context) => new TabBarDemo(),
+      //support route
+      '/eventsscreen': (BuildContext context) => new MyHomeevents(),
+      //upcoming reservations
+      '/buildingscreen': (BuildContext context) => new MyHomebuilding(),
+      //companyn profile
+      '/lifestylescreen': (BuildContext context) => new MyHomePage(),
+      '/keycardscreen': (BuildContext context) => new MyHomekey(),
+      '/referscreen': (BuildContext context) => new TabBarDemo(),
+      //about
+    },
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -21,7 +48,9 @@ class VideoState extends State<VideoSplashScreen> {
   VideoPlayerController playerController;
   VoidCallback listener;
 
-  @override
+
+
+
   @override
   void initState() {
     super.initState();
@@ -35,14 +64,14 @@ class VideoState extends State<VideoSplashScreen> {
     loadData();
   }
 
+
   Future<Timer> loadData() async {
     return new Timer(Duration(seconds: 5), onDoneLoading);
   }
 
   onDoneLoading() async {
     playerController.removeListener(listener);
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => logi()));
+    Navigator.of(context).pushReplacementNamed('/loginscreen');
   }
 
   void initializeVideo() {

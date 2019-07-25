@@ -12,11 +12,6 @@ class _MyHomePageStatekey extends State<MyHomekey> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Keycard Status'),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-      ),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(right: 40, left: 40),
@@ -24,7 +19,8 @@ class _MyHomePageStatekey extends State<MyHomekey> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Active",
-                  style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold)),
+                  style:
+                      TextStyle(fontSize: 45, fontWeight: FontWeight.bold)),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(

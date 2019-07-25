@@ -18,10 +18,7 @@ class _MyHomebuildingState extends State<MyHomebuilding> {
     var height = MediaQuery.of(context).size.height;
     return new Scaffold(
 
-      appBar: AppBar(
-        title: const Text("Building Guide"),
-        backgroundColor: Colors.black,
-      ),
+
       body: ListView.builder(itemBuilder: (BuildContext context , int index)=>
           EntryItem (data[index]),
         itemCount: data.length,
@@ -123,6 +120,7 @@ class EntryItem extends StatelessWidget {
         trailing: const Icon(Icons.add)
     );
   }
+
 
   @override
   Widget build(BuildContext context) {

@@ -5,12 +5,12 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePagee extends StatefulWidget {
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePagee> {
   String url = 'http://demo9206388.mockable.io/events';
   var extractdata1;
   var extractdata2;
